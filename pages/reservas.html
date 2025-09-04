@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café Aurora | Reservas</title>
+  <meta name="description" content="Reserva tu mesa de manera sencilla.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="site-nav">
+      <a class="brand" href="../index.html">Café Aurora</a>
+      <ul class="nav-list">
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a aria-current="page" href="reservas.html">Reservas</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- Título -->
+    <section class="encabezado-pagina">
+      <h1>Reservas</h1>
+      <p>Completa el formulario. Te confirmaremos por correo.</p>
+    </section>
+
+    <!-- Formulario -->
+    <section class="form-reserva">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required>
+
+          <label for="email">Correo</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="telefono">Teléfono</label>
+          <input id="telefono" name="telefono" type="tel" inputmode="numeric">
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalles de la reserva</legend>
+          <label for="sede">Sede</label>
+          <select id="sede" name="sede" required>
+            <option value="">Selecciona</option>
+            <option>Miraflores</option>
+            <option>Barranco</option>
+          </select>
+
+          <label for="personas">Personas</label>
+          <input id="personas" name="personas" type="number" min="1" max="10" value="2" required>
+
+          <label for="fecha">Fecha</label>
+          <input id="fecha" name="fecha" type="date" required>
+
+          <label for="hora">Hora</label>
+          <input id="hora" name="hora" type="time" required>
+
+          <label for="comentarios">Comentarios</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Preferencias de mesa, alergias, etc."></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </section>
+
+    <!-- Wireframe lateral -->
+    <aside class="wire-side">
+      <figure>
+        <img src="../assets/wire/side-9x16.png" alt="Wireframe lateral 9:16">
+        <figcaption>Vista del salón</figcaption>
+      </figure>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Café Aurora</p>
+  </footer>
+</body>
+</html>
