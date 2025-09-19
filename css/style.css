@@ -1,4 +1,54 @@
 @charset "UTF-8";
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  text-rendering: optimizeLegibility;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -135,7 +185,7 @@ main > * {
   margin: 0.5rem 0;
 }
 .hero .hero-media img {
-  border: 1px dashed #CFC8C0;
+  border: 1px solid #CFC8C0;
   background: #EFEAE5;
   border-radius: 14px;
 }
@@ -154,7 +204,7 @@ main > * {
 .mosaico img {
   aspect-ratio: 1/1;
   object-fit: cover;
-  border: 1px dashed #CFC8C0;
+  border: 1px solid #CFC8C0;
   background: #EFEAE5;
   border-radius: 10px;
 }
@@ -249,7 +299,7 @@ main > * {
   border-radius: 999px;
 }
 
-/* --------- Primer colapso mobile (el pequeño) --------- */
+/* Primer colapso mobile */
 @media (max-width: 47.99rem) {
   .burger {
     display: inline-flex;
@@ -288,7 +338,7 @@ main > * {
     display: flex;
   }
 }
-/* --------- Versión mobile full-width pegada al header --------- */
+/* Versión mobile full-width pegada al header */
 @media (max-width: 47.99rem) {
   .site-header {
     border-bottom: 0;
@@ -443,7 +493,7 @@ main > * {
   font-size: clamp(1.35rem, 3vw, 1.5rem);
 }
 .sede .sede-mapa img {
-  border: 1px dashed #CFC8C0;
+  border: 1px solid #CFC8C0;
   background: #EFEAE5;
   border-radius: 14px;
 }
@@ -522,7 +572,7 @@ main > * {
 
 /* Medios con borde punteado */
 .wire-side img, .media-ancha img, .mapa-contacto img {
-  border: 1px dashed #CFC8C0;
+  border: 1px solid #CFC8C0;
   background: #EFEAE5;
   border-radius: 14px;
 }

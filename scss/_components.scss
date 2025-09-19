@@ -50,7 +50,7 @@
   display:grid; gap:$g-2; background:$surface; border:1px solid $border; border-radius:$radius; box-shadow:$shadow; padding:$g-2;
 
   h3{ margin:.25rem 0 .25rem; font-size:$fs-400; }
-  .sede-mapa img{ border:1px dashed #CFC8C0; background:#EFEAE5; border-radius:$radius; }
+  .sede-mapa img{ border:1px solid #CFC8C0; background:#EFEAE5; border-radius:$radius; }
 
   @media (min-width: 48rem){ grid-template-columns:1fr 1.2fr; align-items:center; }
 }
@@ -81,7 +81,7 @@
 
 /* Medios con borde punteado */
 .wire-side img, .media-ancha img, .mapa-contacto img{
-  border:1px dashed #CFC8C0; background:#EFEAE5; border-radius:$radius;
+  border:1px solid #CFC8C0; background:#EFEAE5; border-radius:$radius;
 }
 
 /* Timeline */

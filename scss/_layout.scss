@@ -39,7 +39,7 @@
     h1{ font-size:$fs-600; line-height:1.1; margin:0 0 .5rem; }
     p{ font-size:$fs-200; margin:.5rem 0; }
   }
-  .hero-media img{ border:1px dashed #CFC8C0; background:#EFEAE5; border-radius:$radius; }
+  .hero-media img{ border:1px solid #CFC8C0; background:#EFEAE5; border-radius:$radius; }
 }
 
 /* Mosaico */
@@ -48,7 +48,7 @@
 
   @media (min-width: $bp-sm){ grid-template-columns: repeat(4,1fr); }
 
-  img{ aspect-ratio:1/1; object-fit:cover; border:1px dashed #CFC8C0; background:#EFEAE5; border-radius:10px; }
+  img{ aspect-ratio:1/1; object-fit:cover; border:1px solid #CFC8C0; background:#EFEAE5; border-radius:10px; }
 }
 
 /* Bloques genéricos */
