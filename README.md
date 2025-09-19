@@ -19,28 +19,24 @@ Puntos clave de esta versión
 
 Estructura del proyecto
 -----------------------
-/ (raíz del proyecto)
-├─ index.html
-├─ css/
-│  └─ style.css                 ← archivo único de estilos compilados
-├─ scss/                        ← fuentes Sass (opcional para mantenimiento)
-│  ├─ _variables.scss           ← tokens (colores, radios, sombras, BP, fuentes)
-│  ├─ _mixins.scss              ← mixin container, utilidades
-│  ├─ _base.scss                ← reset, tipografía, elementos base y :root (literal)
-│  ├─ _layout.scss              ← header/nav, hero, grids, mosaico
-│  ├─ _components.scss          ← cards, CTA, tablas, listas, formularios, sedes
-│  ├─ _utilities.scss           ← .table-wrap, helpers de espaciado, .flow
-│  ├─ _animations.scss          ← keyframes y transiciones
-│  └─ main.scss                 ← punto de entrada
-├─ pages/
-│  ├─ menu.html
-│  ├─ sedes.html
-│  ├─ reservas.html
-│  ├─ sobre.html
-│  └─ contacto.html
-└─ assets/
-   ├─ wireframes/               ← imágenes de wireframe / placeholders
-   └─ img/                      ← logos, fotos, mapas, etc.
+- **Raíz**
+  - `index.html`
+  - `css/`
+    - `style.css` — archivo único de estilos compilados
+  - `scss/` — fuentes Sass (opcional)
+    - `_variables.scss` — tokens (colores, radios, sombras, BP, fuentes)
+    - `_mixins.scss` — mixin container, utilidades
+    - `_base.scss` — reset, tipografía, elementos base y :root (literal)
+    - `_layout.scss` — header/nav, hero, grids, mosaico
+    - `_components.scss` — cards, CTA, tablas, listas, formularios, sedes
+    - `_utilities.scss` — `.table-wrap`, helpers de espaciado, `.flow`
+    - `_animations.scss` — keyframes y transiciones
+    - `main.scss` — punto de entrada
+  - `pages/`
+    - `menu.html`, `sedes.html`, `reservas.html`, `sobre.html`, `contacto.html`
+  - `assets/`
+    - `wireframes/` — imágenes de wireframe / placeholders
+    - `img/` — logos, fotos, mapas, etc.
 
 Tecnologías
 -----------
