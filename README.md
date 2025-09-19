@@ -19,7 +19,7 @@ Puntos clave de esta versión
 
 Estructura del proyecto
 -----------------------
-/               raíz del proyecto
+/ (raíz del proyecto)
 ├─ index.html
 ├─ css/
 │  └─ style.css                 ← archivo único de estilos compilados
