@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+@mixin container {
+  width: min(#{$container}, 100% - 2rem);
+  margin-inline: auto;
+}
+
+// Accesible focus ring
+@mixin focus-ring {
+  outline: 2px solid color-mix(in oklab, $accent 25%, #0000);
+  outline-offset: 3px;
+}

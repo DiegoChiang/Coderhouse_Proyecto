@@ -1,0 +1,111 @@
+@use "variables" as *;
+
+/* CTA */
+.cta{
+  display:inline-block; background:$accent; color:#fff; padding:.6rem 1rem; border-radius:999px; font-weight:700; text-decoration:none; transition: background .2s ease;
+}
+
+/* Card */
+.card{
+  background:$surface; border:1px solid $border; border-radius:$radius; box-shadow:$shadow; padding:$g-2;
+
+  h3{ margin:.75rem 0 .25rem; font-size:$fs-300; }
+  .precio{ font-weight:700; }
+}
+
+/* Tabla menú */
+.tabla-menu{
+  width:100%; border-collapse:collapse; background:$surface; border:1px solid $border; border-radius:$radius; box-shadow:$shadow;
+
+  caption{ text-align:left; padding:.75rem 1rem; color:$muted; font-size:$fs-100; }
+
+  thead th{
+    text-align:left; font-weight:700; padding:.9rem 1rem; background:#F2EEE8;
+    position:sticky; top:0; z-index:1; border-bottom:1px solid $border;
+  }
+
+  tbody{
+    td{ padding:.85rem 1rem; border-bottom:1px solid $border; }
+    tr:nth-child(even){ background:#FBFAF8; }
+  }
+}
+
+/* Lista de precios */
+.lista-precios{
+  list-style:none; margin:0; padding:0; display:grid; gap:.6rem;
+
+  li{
+    display:grid; grid-template-columns:1fr auto; align-items:center;
+    background:$surface; border:1px solid $border; box-shadow:$shadow; padding:.65rem .75rem; border-radius:10px;
+  }
+}
+
+/* Nota */
+.nota{ padding:.85rem 1rem; background:#F2EEE8; border:1px solid $border; border-radius:10px; color:#4B4B4B; }
+
+/* Sedes */
+.lista-sedes{ display:grid; gap:$g-3; }
+
+.sede{
+  display:grid; gap:$g-2; background:$surface; border:1px solid $border; border-radius:$radius; box-shadow:$shadow; padding:$g-2;
+
+  h3{ margin:.25rem 0 .25rem; font-size:$fs-400; }
+  .sede-mapa img{ border:1px dashed #CFC8C0; background:#EFEAE5; border-radius:$radius; }
+
+  @media (min-width: 48rem){ grid-template-columns:1fr 1.2fr; align-items:center; }
+}
+
+/* Formularios */
+%input-base{
+  width:100%; padding:.65rem .75rem; border-radius:10px; border:1px solid #D8D2CB; background:#FFFEFD; color:$text; font-size:$fs-200;
+
+  &:focus{ outline:2px solid color-mix(in oklab, $accent 40%, white); border-color:$accent; }
+}
+
+.form-reserva form,
+.form-contacto form{
+  display:grid; gap:$g-3; background:$surface; border:1px solid $border; border-radius:$radius; box-shadow:$shadow; padding:$g-3;
+
+  fieldset{ border:0; padding:0; margin:0; display:grid; gap:.75rem; }
+  legend{ font-weight:700; margin-bottom:.5rem; }
+  label{ font-weight:600; }
+
+  input, select, textarea{ @extend %input-base; }
+
+  button{
+    appearance:none; border:0; display:inline-block; background:$accent; color:#fff;
+    padding:.6rem 1rem; border-radius:999px; font-weight:700; text-decoration:none; transition: background .2s ease;
+  }
+  button:hover{ background:$accent-2; }
+}
+
+/* Medios con borde punteado */
+.wire-side img, .media-ancha img, .mapa-contacto img{
+  border:1px dashed #CFC8C0; background:#EFEAE5; border-radius:$radius;
+}
+
+/* Timeline */
+.timeline{
+  list-style:none; padding:0; margin:$g-3 0; position:relative;
+  border-left:3px solid color-mix(in oklab, $accent 60%, #0000);
+
+  li{
+    padding-left:1rem; margin:.75rem 0 .75rem 1rem; position:relative;
+
+    &::before{
+      content:""; position:absolute; left:-.62rem; top:.4rem; width:.75rem; height:.75rem;
+      background:$accent; border-radius:50%; box-shadow:0 0 0 3px #FAF6F2;
+    }
+  }
+}
+
+/* Tablas responsive: min-width solo en mobile */
+@media (max-width:47.99rem){ .tabla-menu{ min-width:560px; } }
+
+/* Densidad en pantallas muy chicas */
+@media (max-width:31.25rem){
+  .tabla-menu thead th{ padding:.7rem .8rem; }
+  .tabla-menu tbody td{ padding:.7rem .8rem; }
+  .tabla-menu caption{ padding:.5rem .8rem; }
+}
+

@@ -1,7 +1,11 @@
+# SO / IDE
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+
+# Build
 node_modules/
-dist/
-.cache/
+*.mapnode_modules/
+.sass-cache/
+.DS_Store
