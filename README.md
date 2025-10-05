@@ -6,6 +6,7 @@
 **Link del repositorio de Github:** https://github.com/DiegoChiang/Coderhouse_Proyecto
 **Link de la web alojada en servidor de Vercel:** https://coderhouse-proyecto-ecru.vercel.app/
 **Link de la web alojada en servidor de Github Pages:** https://diegochiang.github.io/Coderhouse_Proyecto/
+
 ---
 
 ## Alcance y páginas
