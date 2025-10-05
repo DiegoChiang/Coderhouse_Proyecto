@@ -1,93 +1,84 @@
-Café Aurora — Proyecto estático (HTML + CSS)
 
-Créditos
---------
-Diseño y desarrollo: Diego Alonso Chiang Meléndez
+# Café Aurora — Versión Final
 
-Resumen
--------
-Sitio web estático para un café de especialidad, pensado como entrega de Coderhouse. Sin JavaScript: toda la interactividad es con HTML/CSS (checkbox hack). Diseño desktop-first con adaptación mobile.
+**Autor:** Diego Alonso Chiang Meléndez  
+**Descripción:** Sitio web estático de una cafetería de especialidad. Implementa HTML5 semántico, CSS nativo (Grid/Flex) y uso selectivo de Bootstrap en partes clave para cumplir el criterio de framework sin perder la identidad visual. Incluye optimizaciones de SEO, accesibilidad y rendimiento.
 
-Puntos clave de esta versión
-----------------------------
-- Navbar desktop con variante mobile (hamburguesa → “X”) sin JS.
-- Menú mobile desplegable a **todo el ancho**, pegado al header (sin gaps) y con una **línea superior negra**.
-- Tablas del Menú con encabezado `position: sticky`, envoltorio `.table-wrap` y **scroll horizontal solo en mobile** (`min-width` condicional).
-- Paleta y tipografía en CSS tokens y valores fijos; animaciones suaves (`fade-up`) y transiciones en CTA/cards.
-- Formularios accesibles (focus visible, labels, `fieldset/legend`), sin validación JS.
-- Rutas relativas consistentes en todas las páginas.
+---
 
-Estructura del proyecto
------------------------
-- **Raíz**
-  - `index.html`
-  - `css/`
-    - `style.css` — archivo único de estilos compilados
-  - `scss/` — fuentes Sass (opcional)
-    - `_variables.scss` — tokens (colores, radios, sombras, BP, fuentes)
-    - `_mixins.scss` — mixin container, utilidades
-    - `_base.scss` — reset, tipografía, elementos base y :root (literal)
-    - `_layout.scss` — header/nav, hero, grids, mosaico
-    - `_components.scss` — cards, CTA, tablas, listas, formularios, sedes
-    - `_utilities.scss` — `.table-wrap`, helpers de espaciado, `.flow`
-    - `_animations.scss` — keyframes y transiciones
-    - `main.scss` — punto de entrada
-  - `pages/`
-    - `menu.html`, `sedes.html`, `reservas.html`, `sobre.html`, `contacto.html`
-  - `assets/`
-    - `wireframes/` — imágenes de wireframe / placeholders
-    - `img/` — logos, fotos, mapas, etc.
+## Alcance y páginas
 
-Tecnologías
------------
-- HTML5 semántico
-- CSS3 (Grid/Flex, `clamp`, `position: sticky`)
-- Sass (opcional): sintaxis SCSS para modularizar
-- Sin JavaScript
+- **Inicio**: portada con hero, navegación y mosaicos; estilo propio con CSS Grid y Flexbox.  
+- **Menú**: listado de productos y precios; se usan componentes y utilidades de Flexbox.  
+- **Sedes**: presentación de locales; se emplean tarjetas y grilla responsiva de Bootstrap.  
+- **Reservas**: formulario con controles accesibles y validación nativa; maquetación responsiva con el sistema de grillas de Bootstrap.  
+- **Sobre** y **Contacto**: contenido institucional y formulario de contacto; mantienen el estilo nativo.
 
-Guía de estilos (tokens)
-------------------------
-- Colores base:
-  - Texto: #1C1C1C
-  - Fondo: #F7F4F0
-  - Superficie (tarjetas): #FFFFFF
-  - Muted: #6A6A6A
-  - Borde: #E5E1DC
-  - Acents: #7A4E2D / #A1663D (hover)
-- Radios: 14px (cards/tablas), 10px (chips/list items)
-- Sombra base: 0 1px 2px rgba(0,0,0,.06), 0 6px 24px rgba(0,0,0,.06)
-- Tipografía: sistema (system-ui stack)
+> Bootstrap se aplica **solo** en Sedes y Reservas, mientras que Inicio, Menú, Sobre y Contacto conservan el layout nativo para evidenciar dominio de CSS puro.
 
-Comportamiento responsive
--------------------------
-- Desktop-first. Punto de quiebre principal: 48rem (~768px).
-- Navbar:
-  - Desktop: lista horizontal.
-  - Mobile (<48rem): input `#nav-toggle` + label `.burger`. El menú:
-    - Ocupa todo el ancho (`left:0; right:0; top:100%`), sin `100vw` (evita overflow).
-    - Links centrados y espaciados.
-    - Ícono hamburguesa anima a “X” con `::before/::after`.
-- Tablas del Menú:
-  - Wrapper `.table-wrap` con `overflow-x:auto` y `-webkit-overflow-scrolling:touch`.
-  - `.tabla-menu` usa `min-width:560px` **solo en mobile**.
-  - `thead th` sticky.
+---
 
-Accesibilidad
--------------
-- Enlaces y botones con `:focus-visible` notorio.
-- Contraste adecuado en textos/CTAs.
-- Navegación por teclado en el menú (checkbox + label).
-- Semántica: `header/nav/main/section/footer`, `fieldset/legend`, `caption` en tablas.
+## Tecnologías y decisiones
 
-Animaciones y transiciones
---------------------------
-- Keyframe `fade-up` en `.hero .hero-texto` y `.card` (0.45s, ease).
-- Transiciones en `.cta`/`.card`/links (color, sombra). `.cta:active` aplica leve `scale(0.98)`.
-- El menú mobile aparece/desaparece sin animación del panel (opcional agregar opacidad/translate).
+- **HTML5 semántico**: estructura clara con encabezados jerárquicos y secciones bien delimitadas.  
+- **CSS nativo (Grid/Flex)**: layouts propios, tipografía y diseño visual consistente con la marca.  
+- **Bootstrap 5 **: uso acotado para tablas, formularios, tarjetas y grillas en 2 páginas.  
+- **Hojas de estilo de apoyo**:  
+  - *bootstrap-aurora.css*: adapta Bootstrap a la paleta/espaciados de la marca.  
+  - *bootstrap-helpers.css*: utilidades ligeras para separar contenido y mejorar consistencia.  
+  - *bootstrap-pages.css*: ajustes por página para integrar Bootstrap sin romper el estilo existente.  
 
-Convenciones HTML/CSS adoptadas
--------------------------------
-- Sin JS, sin frameworks CSS.
-- Desktop-first con media queries a `max-width:47.99rem` y `min-width` donde corresponde.
-- Rutas relativas entre páginas: `../pages/...`, `../css/style.css` desde `/pages`.
-- `main > *` aplica el contenedor; por eso cada sección cuelga **directamente** de `<main>` (sin un wrapper extra).
+---
+
+## SEO aplicado (resumen)
+
+- **Titulado y descripción únicos por página** para mejorar pertinencia en buscadores.  
+- **URL canónica** autorreferente en cada documento para consolidar señales de ranking.  
+- **Metadatos sociales** (Open Graph y Twitter) con título, resumen y una imagen compartible. 
+- **Color de tema del navegador** para móviles, favicons e íconos para diferentes plataformas.  
+
+---
+
+## Accesibilidad (resumen)
+
+- **Navegación por teclado** fluida con enfoque visible.  
+- **Skip link** visible al enfocar.  
+- **Menú móvil** con control anunciable para tecnologías de asistencia.  
+- **Etiquetas de formularios** conectadas a sus campos y autocompletado activado.  
+- **Tablas** con encabezados de columna identificados y descripciones breves.  
+- **Texto alternativo** en imágenes significativas; imágenes decorativas marcadas como tales.
+
+---
+
+## Rendimiento y buenas prácticas
+
+- **Imágenes**: tamaños adecuados, compresión y carga diferida en contenidos no críticos.  
+- **Fuentes**: criterio en el número de variantes y comportamiento apropiado de carga.  
+- **Orden de estilos**: el framework y las hojas de apoyo van antes del estilo principal para facilitar sobrescrituras controladas.  
+- **Evitar desbordes**: pruebas en anchos comunes desde móvil pequeño hasta escritorio amplio.
+
+---
+
+## Estructura del repositorio (descripción)
+
+- Carpeta en la raíz con la página principal.  
+- Carpeta de páginas con los documentos internos del sitio.  
+- Carpeta de estilos con la hoja principal y los archivos de integración de Bootstrap.  
+- Carpeta de assets con íconos y recursos gráficos.  
+
+---
+
+## Cambios destacados respecto a la versión previa
+
+- Integración del framework en secciones seleccionadas para evidenciar su uso sin sustituir todo el diseño.  
+- Metadatos SEO y sociales por página, con pautas de imágenes compartibles.  
+- Mejoras de accesibilidad en navegación, formularios e imágenes.  
+- Medidas de rendimiento enfocadas en estabilidad visual y tiempos de carga.  
+- Organización de estilos en capas: framework, ayudas y hoja principal.
+
+---
+
+## Créditos y licencia
+
+Proyecto académico con fines educativos.  
+Diseño y desarrollo: Diego Alonso Chiang Meléndez.

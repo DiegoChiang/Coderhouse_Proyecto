@@ -1,0 +1,13 @@
+.section-wrap{ padding-block:2rem; }
+.section-wrap > .container{ max-width:1200px; }
+
+.gy-6{ --bs-gutter-y: 2rem; }
+.gx-6{ --bs-gutter-x: 2rem; }
+
+/* Imagenes dentro de tarjetas con borde suave */
+.img-soft{ border:1px solid #CFC8C0; background:#EFEAE5; border-radius:14px; }
+
+.h3-like{ font-size:clamp(1.125rem,2.2vw,1.25rem); font-weight:700; margin:.75rem 0 .25rem; }
+.h2-like{ font-size:clamp(1.35rem,3vw,1.5rem); font-weight:700; margin:0 0 .5rem; }
+
+.table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:14px; }

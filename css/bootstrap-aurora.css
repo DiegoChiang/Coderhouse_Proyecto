@@ -1,0 +1,60 @@
+:root{
+  /* Colores de marca */
+  --bs-primary: #7A4E2D;
+  --bs-primary-rgb: 122, 78, 45;
+  --bs-link-color: #7A4E2D;
+  --bs-link-hover-color: #A1663D;
+
+  /* Tipografía y superficies */
+  --bs-body-font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  --bs-body-color: #1C1C1C;
+  --bs-body-bg: #F7F4F0;
+
+  /* Radios suaves como tu UI */
+  --bs-border-radius: .875rem;
+  --bs-border-radius-sm: .625rem;
+  --bs-border-radius-lg: 1rem;
+  --bs-border-radius-xl: 1.25rem;
+}
+
+.container-aurora{ max-width:1200px; }
+.shadow-soft{ box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 6px 24px rgba(0,0,0,.06); }
+
+/* Botones principales en tono café */
+.btn-primary{
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #A1663D;
+  --bs-btn-hover-border-color: #A1663D;
+  --bs-btn-active-bg: #8c5b37;
+  --bs-btn-active-border-color: #8c5b37;
+  --bs-btn-focus-shadow-rgb: 122,78,45;
+  font-weight:700;
+  border-radius: 999px;
+}
+
+/* Enlaces */
+a.nav-link, .nav-link{ border-radius:999px; }
+.nav-link:hover{ background:#f2eee8; }
+
+/* Tarjetas y tablas con look Aurora */
+.card{ border-radius:14px; border:1px solid #E5E1DC; background:#fff; }
+.card.shadow-soft{ box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 6px 24px rgba(0,0,0,.06); }
+
+.table{ background:#fff; border:1px solid #E5E1DC; border-radius:14px; overflow:hidden; }
+.table thead th{ background:#F2EEE8; }
+.table > :not(caption) > * > *{ padding:.85rem 1rem; }
+
+/* Formularios */
+.form-control, .form-select, textarea.form-control{
+  background:#FFFEFD; border:1px solid #D8D2CB; border-radius:10px;
+}
+.form-control:focus, .form-select:focus, textarea.form-control:focus{
+  border-color:#7A4E2D;
+  box-shadow: 0 0 0 .25rem rgba(122,78,45,.15);
+}
+
+/* Utilidades de color y chip */
+.text-coffee{ color:#7A4E2D !important; }
+.bg-coffee-10{ background:#FBFAF8 !important; }
+.badge-coffee{ background:#7A4E2D; }

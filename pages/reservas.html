@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Café Aurora | Reservas</title>
     <meta name="description" content="Reserva tu mesa de manera sencilla." />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Reservas — Café Aurora" />
+    <meta
+      property="og:description"
+      content="Reserva tu mesa en línea en minutos. Elige sede, fecha y horario."
+    />
+    <meta property="og:image" content="../assets/miniaturas/download.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Barista sirviendo espresso en la barra de Café Aurora"
+    />
+    <meta name="twitter:title" content="Reservas — Café Aurora" />
+    <meta
+      name="twitter:description"
+      content="Reserva tu mesa en línea en minutos."
+    />
+    <meta name="twitter:image" content="../assets/miniaturas/download.jpg" />
+    <link rel="icon" href="../assets/icons/icon.png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-aurora.css" />
+    <link rel="stylesheet" href="../css/bootstrap-helpers.css" />
+    <link rel="stylesheet" href="../css/bootstrap-pages.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
+  <body class="use-bs-reservas">
     <!-- Header -->
     <header class="site-header">
       <nav class="site-nav">
@@ -40,80 +63,114 @@
         <p>Completa el formulario. Te confirmaremos por correo.</p>
       </section>
 
-      <!-- Formulario -->
-      <section class="form-reserva">
-        <form action="#" method="post">
-          <fieldset>
-            <legend>Datos de contacto</legend>
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" required />
+<!-- Reservas (Bootstrap) -->
+<section class="section-wrap">
+  <div class="container">
 
-            <label for="email">Correo</label>
-            <input id="email" name="email" type="email" required />
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <form class="needs-validation" novalidate>
+          <fieldset class="mb-4">
+            <legend class="h2-like mb-3">Datos de contacto</legend>
 
-            <label for="telefono">Teléfono</label>
-            <input
-              id="telefono"
-              name="telefono"
-              type="tel"
-              inputmode="numeric"
-            />
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input id="nombre" name="nombre" type="text" required autocomplete="name" class="form-control">
+              <div class="invalid-feedback">Ingresa tu nombre.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo</label>
+              <input id="email" name="email" type="email" required autocomplete="email" class="form-control">
+              <div class="invalid-feedback">Ingresa un correo válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" class="form-control">
+            </div>
           </fieldset>
 
-          <fieldset>
-            <legend>Detalles de la reserva</legend>
-            <label for="sede">Sede</label>
-            <select id="sede" name="sede" required>
-              <option value="">Selecciona</option>
-              <option>Miraflores</option>
-              <option>Barranco</option>
-            </select>
+          <fieldset class="mb-4">
+            <legend class="h2-like mb-3">Detalles de la reserva</legend>
 
-            <label for="personas">Personas</label>
-            <input
-              id="personas"
-              name="personas"
-              type="number"
-              min="1"
-              max="10"
-              value="2"
-              required
-            />
+            <div class="row gy-3">
+              <div class="col-sm-6">
+                <label for="sede" class="form-label">Sede</label>
+                <select id="sede" name="sede" required class="form-select">
+                  <option value="">Selecciona</option>
+                  <option>Miraflores</option>
+                  <option>Barranco</option>
+                </select>
+                <div class="invalid-feedback">Elige una sede.</div>
+              </div>
 
-            <label for="fecha">Fecha</label>
-            <input id="fecha" name="fecha" type="date" required />
+              <div class="col-sm-6">
+                <label for="personas" class="form-label">Personas</label>
+                <input id="personas" name="personas" type="number" min="1" max="10" value="2" required class="form-control">
+                <div class="invalid-feedback">Entre 1 y 10 personas.</div>
+              </div>
 
-            <label for="hora">Hora</label>
-            <input id="hora" name="hora" type="time" required />
+              <div class="col-sm-6">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input id="fecha" name="fecha" type="date" required class="form-control">
+                <div class="invalid-feedback">Selecciona fecha.</div>
+              </div>
 
-            <label for="comentarios">Comentarios</label>
-            <textarea
-              id="comentarios"
-              name="comentarios"
-              rows="4"
-              placeholder="Preferencias de mesa, alergias, etc."
-            ></textarea>
+              <div class="col-sm-6">
+                <label for="hora" class="form-label">Hora</label>
+                <input id="hora" name="hora" type="time" required class="form-control">
+                <div class="invalid-feedback">Selecciona hora.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="comentarios" class="form-label">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="4" class="form-control"
+                          placeholder="Preferencias de mesa, alergias, etc."></textarea>
+              </div>
+            </div>
           </fieldset>
 
-          <button type="submit">Enviar solicitud</button>
+          <button type="submit" class="btn btn-primary">Enviar solicitud</button>
         </form>
-      </section>
+      </div>
 
-      <!-- Wireframe lateral -->
-      <aside class="wire-side">
+      <!-- Columna derecha: imagen lateral -->
+      <aside class="col-lg-5">
         <figure>
-          <img
-            src="../assets/wire/side-9x16.png"
-            alt="Wireframe lateral 9:16"
-          />
+          <img src="../assets/wire/side-9x16.png" alt="Wireframe lateral 9:16"
+               class="img-fluid aside-img">
           <figcaption>Vista del salón</figcaption>
         </figure>
       </aside>
-    </main>
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="site-footer">
       <p>&copy; 2025 Café Aurora</p>
     </footer>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (e) => {
+              if (!form.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>

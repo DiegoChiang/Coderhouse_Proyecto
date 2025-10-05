@@ -1,0 +1,24 @@
+body.use-bs-menu main > *,
+body.use-bs-sedes main > *,
+body.use-bs-reservas main > *{
+  width:min(1200px, 100% - 2rem);
+  margin-inline:auto;
+}
+
+/* MENÚ */
+body.use-bs-menu .tabla-menu.table{
+  border:1px solid #E5E1DC;
+  border-radius:14px;
+}
+body.use-bs-menu .lista-precios .list-group-item{
+  display:grid; grid-template-columns:1fr auto; align-items:center;
+  border:1px solid #E5E1DC; border-radius:10px; padding:.65rem .75rem;
+}
+
+/* SEDES */
+body.use-bs-sedes .card .card-img-top{ border:1px solid #CFC8C0; background:#EFEAE5; border-radius:14px; }
+body.use-bs-sedes .card{ height:100%; }
+
+/* RESERVAS */
+body.use-bs-reservas form .form-label{ font-weight:600; }
+body.use-bs-reservas .aside-img{ border:1px solid #CFC8C0; background:#EFEAE5; border-radius:14px; }

@@ -8,9 +8,33 @@
       name="description"
       content="Direcciones, horarios y mapas de nuestras sedes."
     />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Sedes — Café Aurora" />
+    <meta
+      property="og:description"
+      content="Visítanos en Miraflores y Barranco. Direcciones, horarios y mapa de referencia."
+    />
+    <meta property="og:image" content="../assets/miniaturas/download.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Barista sirviendo espresso en la barra de Café Aurora"
+    />
+    <meta name="twitter:title" content="Sedes — Café Aurora" />
+    <meta
+      name="twitter:description"
+      content="Direcciones, horarios y mapa de referencia."
+    />
+    <meta name="twitter:image" content="../assets/miniaturas/download.jpg" />
+    <link rel="icon" href="../assets/icons/icon.png" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-aurora.css" />
+    <link rel="stylesheet" href="../css/bootstrap-helpers.css" />
+    <link rel="stylesheet" href="../css/bootstrap-pages.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
-  <body>
+  <body class="use-bs-reservas">
     <!-- Header -->
     <header class="site-header">
       <nav class="site-nav">
@@ -43,37 +67,43 @@
         <p>Elige la más cercana y revisa horarios.</p>
       </section>
 
-      <!-- Lista de sedes -->
-      <section class="lista-sedes">
-        <article class="sede">
-          <div class="sede-info">
-            <h4>Miraflores</h4>
-            <p>Av. Principal 123, Miraflores</p>
-            <p>Lun–Dom: 7:00–21:00</p>
-          </div>
-          <figure class="sede-mapa">
-            <img
-              src="../assets/wire/map-4x3.png"
-              alt="Wireframe mapa de Miraflores"
-            />
-            <figcaption>Referencia de ubicación</figcaption>
-          </figure>
-        </article>
+      <!-- Lista de sedes (Bootstrap) -->
+      <section class="section-wrap">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <!-- Sede Miraflores -->
+            <div class="col">
+              <div class="card shadow-soft h-100">
+                <img
+                  src="../assets/wire/map-4x3.png"
+                  class="card-img-top img-soft"
+                  alt="Wireframe mapa de Miraflores"
+                />
+                <div class="card-body">
+                  <h4 class="card-title h2-like">Miraflores</h4>
+                  <p class="card-text mb-1">Av. Principal 123, Miraflores</p>
+                  <span class="badge badge-coffee">Lun–Dom: 7:00–21:00</span>
+                </div>
+              </div>
+            </div>
 
-        <article class="sede">
-          <div class="sede-info">
-            <h4>Barranco</h4>
-            <p>Calle Cultural 456, Barranco</p>
-            <p>Lun–Dom: 8:00–22:00</p>
+            <!-- Sede Barranco -->
+            <div class="col">
+              <div class="card shadow-soft h-100">
+                <img
+                  src="../assets/wire/map-4x3.png"
+                  class="card-img-top img-soft"
+                  alt="Wireframe mapa de Barranco"
+                />
+                <div class="card-body">
+                  <h4 class="card-title h2-like">Barranco</h4>
+                  <p class="card-text mb-1">Calle Cultural 456, Barranco</p>
+                  <span class="badge badge-coffee">Lun–Dom: 8:00–22:00</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <figure class="sede-mapa">
-            <img
-              src="../assets/wire/map-4x3.png"
-              alt="Wireframe mapa de Barranco"
-            />
-            <figcaption>Referencia de ubicación</figcaption>
-          </figure>
-        </article>
+        </div>
       </section>
 
       <!-- Nota -->
@@ -86,5 +116,6 @@
     <footer class="site-footer">
       <p>&copy; 2025 Café Aurora</p>
     </footer>
+    <script defer src="../js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
