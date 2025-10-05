@@ -3,7 +3,9 @@
 
 **Autor:** Diego Alonso Chiang Meléndez  
 **Descripción:** Sitio web estático de una cafetería de especialidad. Implementa HTML5 semántico, CSS nativo (Grid/Flex) y uso selectivo de Bootstrap en partes clave para cumplir el criterio de framework sin perder la identidad visual. Incluye optimizaciones de SEO, accesibilidad y rendimiento.
-
+**Link del repositorio de Github:** https://github.com/DiegoChiang/Coderhouse_Proyecto
+**Link de la web alojada en servidor de Vercel:** https://coderhouse-proyecto-ecru.vercel.app/
+**Link de la web alojada en servidor de Github Pages:** https://diegochiang.github.io/Coderhouse_Proyecto/
 ---
 
 ## Alcance y páginas
